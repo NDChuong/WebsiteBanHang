@@ -1,0 +1,16 @@
+header{
+    height: 100px;
+    background-color: aqua;
+}
+header .container a.logo{
+    width: 100px;
+    height: 30px;
+    background-color: brown;
+}
+
+.shopcam-logo{
+    background-image: url('assets/image/logo.png');
+    background-position: -163px -80px;
+    width: 252px;
+    height: 68px;
+}

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CameraShop</title>
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
     
 </head>
 
@@ -15,20 +15,26 @@
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <header>
-        <a href="index.html" class="logo"></a>
-        <div class="form-search">
-            <form action="" id="search_form">
-                <div class="search-wrap">
-                    <div id="input">
-                        <input type="text">
-                    </div>
-                    <button type="submit">
-                        <span class="glyphicon glyphicon-search"></span>
-                        <span>Tìm kiếm</span>
-                    </button>
+        <div class="container">
+            
+                <a href="index.html" class="logo">
+                    <div class="shopcam-logo"></div>
+                </a>
+                <div class="form-search">                       
+                        <form class="form-inline">
+                                <div class="form-group">                                  
+                                  <input type="text" class="form-control" placeholder="Tên sản phẩm">
+                                </div>                                
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>                                        
+                                    Tìm kiếm
+                                </button>
+                        </form>
                 </div>
-            </form>
+                
         </div>
+        
+        
     </header>
 </body>
 
