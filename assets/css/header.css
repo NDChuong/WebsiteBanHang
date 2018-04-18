@@ -1,16 +1,66 @@
-header{
+header {
     height: 100px;
     background-color: aqua;
 }
-header .container a.logo{
-    width: 100px;
-    height: 30px;
-    background-color: brown;
+
+.container{
+	padding-top: 20px;
+	position: relative;
+	z-index: 3;
+}
+.container a.logo{
+	display: inline-block;
+	float: left;
 }
 
-.shopcam-logo{
-    background-image: url('assets/image/logo.png');
-    background-position: -163px -80px;
-    width: 252px;
-    height: 68px;
+.shopcam-logo {
+    background-image: url(../image/logo.png);
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    margin-right: 20px;    
+}
+header .container .form-search{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	float: left;
+	box-sizing: border-box;
+}
+header .header-link .item{	
+    font-size: 16px;
+    padding: 6px 0 0 30px;
+    position: relative;
+    vertical-align: top;
+    font-weight: 400;
+    line-height: 14px;
+    display: inline-block;
+    letter-spacing: .9px;
+    margin-left: 25px;
+}
+.icon-cart{
+	font-size: 16px;
+}
+.cart-count{
+	color: #4a4a4a;
+    background: #FF5E00;
+    height: 25px;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 3px;
+    font-size: 16px;
+    padding: 3px 6px;
+    font-weight: 400;
+}
+header a{
+	text-decoration: none !important;
+}
+header #header-cart{
+	border: 2px solid #fff;
+    padding: 8px 20px 8px 20px;
+    border-radius: 4px;
+    margin-left: 40px;
+    letter-spacing: .9px;    
 }
