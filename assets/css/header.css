@@ -27,9 +27,14 @@ header .container .form-search{
 	float: left;
 	box-sizing: border-box;
 }
+header .container .form-search .form-inline .form-group .input{
+	width: 400px;
+	height: 40px;
+	background-color: #fff;
+}
 header .header-link .item{	
     font-size: 16px;
-    padding: 6px 0 0 30px;
+    padding: 8px 20px 8px 20px;
     position: relative;
     vertical-align: top;
     font-weight: 400;
@@ -37,6 +42,15 @@ header .header-link .item{
     display: inline-block;
     letter-spacing: .9px;
     margin-left: 25px;
+    height: 40px;
+}
+header #header-user{
+	border: 2px solid #fff;
+    padding: 8px 20px 8px 20px;
+    border-radius: 4px;
+    margin-left: 40px;
+    letter-spacing: .9px; 
+
 }
 .icon-cart{
 	font-size: 16px;
@@ -44,23 +58,37 @@ header .header-link .item{
 .cart-count{
 	color: #4a4a4a;
     background: #FF5E00;
-    height: 25px;
+    height: 20px;
     border-radius: 2px;
     display: inline-block;
     text-align: center;
     line-height: 20px;
     margin-left: 3px;
     font-size: 16px;
-    padding: 3px 6px;
+    padding: 2px 6px;
     font-weight: 400;
 }
 header a{
 	text-decoration: none !important;
+}
+a.a-header-cart{
+	position: relative;
+	top:-10px;
+	left:-22px;
+
+	padding-top: 8px;
+	width: 173px;
+    height: 40px; 
+    display: block;
+    text-align: center;
+    
 }
 header #header-cart{
 	border: 2px solid #fff;
     padding: 8px 20px 8px 20px;
     border-radius: 4px;
     margin-left: 40px;
-    letter-spacing: .9px;    
+    letter-spacing: .9px;  
+    width: 173px;
+    height: 40px;  
 }

@@ -1,0 +1,17 @@
+div.nar-bar{
+	height: 100px;
+	background-color: #3A3F44;
+}
+
+
+a.logo{
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 54px;
+	background-image: url('../image/logo.png');
+	
+}	
+div#header .container .nar-bar .search-form{
+	width: 500px;
+}
