@@ -1,0 +1,29 @@
+#main-body{
+
+}
+
+#main-body .container .row .menu{
+	background-color: #e3e3e3;
+	
+}
+li{
+	list-style-type: none;
+}
+li a{
+	color: #000;
+}
+#main-body .container .row .menu .menu-open{
+	margin-left: 10px;
+	padding-top: 10px;
+
+}
+
+#main-body .container .row .viewer{
+	background-color: #e3e3e3;
+	line-height: 0;
+}
+
+#main-body .container .row .viewer .thumbnail{
+	display: block;
+	
+}
