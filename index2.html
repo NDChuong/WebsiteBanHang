@@ -15,16 +15,42 @@
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <div id="header">
         <div class="container">
-            <div class="nar-bar">
+            <div class="blank"></div>
+            <div id="logo-area" class="nar-bar">
                 <a href="index2.html" class="logo"></a>
-                <form action="#" class="form-inline">
-                    <input type="text" id="search-field" class="form-control search-form">
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-                
+                <div class="form-search">
+                    <form action="#" class="form-inline">
+                        <input type="text" id="search-field" class="form-control search-form">
+                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </form>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle header-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Đăng nhập
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Đăng nhập</a></li>
+                        <li><a href="#">Đăng ký</a></li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <button type="button" class="btn btn-success">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        <span>Giỏ hàng</span>
+                        <span class="cart-count">[0]</span>
+                    </button>
+
+                </div>
             </div>
         </div>
     </div>
+
+    <div id="slide-show"></div>
+    <div id="main-body">
+        
+    </div>
+    <div id="footer"></div>
 </body>
 
 </html>
