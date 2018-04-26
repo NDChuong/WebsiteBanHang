@@ -10,7 +10,7 @@
 }
 
 #srchFld {
-    background: url(../images/search.png) no-repeat 4px center #fff;
+    background: no-repeat 4px center #fff;
 }
 
 .tag {
@@ -380,6 +380,7 @@
 .navbar-search .srchTxt {
     border-radius: 0;
     border: 1px solid #444;
+    width: 400px;
 }
 
 [class^="icon-"],
@@ -420,7 +421,6 @@
 .navbar-search {
     margin-top: 8px;
 }
-
 
 /* Responsive--------------------- */
 
