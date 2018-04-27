@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Less styles -->
     <!-- Other Less css file //different less files has different color scheam
-	<link rel="stylesheet/less" type="text/css" href="themes/less/simplex.less">
-	<link rel="stylesheet/less" type="text/css" href="themes/less/classified.less">
-	<link rel="stylesheet/less" type="text/css" href="themes/less/amelia.less">  MOVE DOWN TO activate
-	-->
+    <link rel="stylesheet/less" type="text/css" href="themes/less/simplex.less">
+    <link rel="stylesheet/less" type="text/css" href="themes/less/classified.less">
+    <link rel="stylesheet/less" type="text/css" href="themes/less/amelia.less">  MOVE DOWN TO activate
+    -->
     <!--<link rel="stylesheet/less" type="text/css" href="themes/less/bootshop.less">
-	<script src="themes/js/less.js" type="text/javascript"></script> -->
+    <script src="themes/js/less.js" type="text/javascript"></script> -->
     <!-- Bootstrap style -->
     <link id="callCss" rel="stylesheet" href="themes/bootshop/bootstrap.min.css" media="screen" />
     <link href="themes/css/base.css" rel="stylesheet" media="screen" />
@@ -54,11 +54,17 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal loginFrm">
-                                        <div class="control-group">
-                                            <input type="text" id="inputEmail" placeholder="Email">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Email: </span>
+                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                            </div>
                                         </div>
-                                        <div class="control-group">
-                                            <input type="password" id="inputPassword" placeholder="Password">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="checkbox">
@@ -71,13 +77,53 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="">
+                            <a href="#signin" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng ký</span></a>
+                            <div id="signin" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="false">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3>Đăng ký</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal loginFrm">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Email: </span>
+                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Xác nhận mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
+                                        </div>                                        
+                                        
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Mã captcha: </span>
+                                                <input type="text" id="inputCaptcha" placeholder="Captcha" class="span3">
+                                            </div>
+                                        </div> 
+                                        
+                                    </form>
+                                    <button type="submit" class="btn btn-success">Đăng ký</button>
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End====================================================================== -->
-    
     <div id="mainBody">
         <div class="container">
             <div class="row">
@@ -116,7 +162,7 @@
                             <h5>Kindle</h5>
                             <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm <i class="icon-shopping-cart"></i></a></h4>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <!-- Sidebar end=============================================== -->
                 <div class="span10">
@@ -492,15 +538,14 @@
                         </li>
                     </ul>
                     <ul class="thumbnails">
-                        <
-                    </ul>
+                        < </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer ================================================================== -->
     <div id="footerSection">
-        <div class="container">            
+        <div class="container">
             <p class="pull-right">&copy; Bootshop</p>
         </div>
         <!-- Container End -->
@@ -512,7 +557,6 @@
     <script src="themes/js/bootshop.js"></script>
     <script src="themes/js/jquery.lightbox-0.5.js"></script>
     <!-- Themes switcher section ============================================================================================= -->
-    
     <span id="themesBtn"></span>
 </body>
 

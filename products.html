@@ -54,11 +54,17 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="form-horizontal loginFrm">
-                                        <div class="control-group">
-                                            <input type="text" id="inputEmail" placeholder="Email">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Email: </span>
+                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                            </div>
                                         </div>
-                                        <div class="control-group">
-                                            <input type="password" id="inputPassword" placeholder="Password">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="checkbox">
@@ -67,6 +73,59 @@
                                         </div>
                                     </form>
                                     <button type="submit" class="btn btn-success">Đăng nhập</button>
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="#signin" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng ký</span></a>
+                            <div id="signin" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="false">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3>Đăng ký</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal loginFrm">
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Email: </span>
+                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Xác nhận mật khẩu: </span>
+                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                            </div>
+                                        </div>                                        
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Giới tính: </span>
+                                                <form class="span3">
+                                                    <label class="radio inline">
+                                                        <input type="radio" name="Gender">Nam
+                                                    </label>
+                                                    <label class="radio inline">
+                                                        <input type="radio" name="Gender">Nữ
+                                                    </label>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group align-row">
+                                                <span class="span2">Mã captcha: </span>
+                                                <input type="text" id="inputCaptcha" placeholder="Captcha" class="span3">
+                                            </div>
+                                        </div> 
+                                        
+                                    </form>
+                                    <button type="submit" class="btn btn-success">Đăng ký</button>
                                     <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
                                 </div>
                             </div>
