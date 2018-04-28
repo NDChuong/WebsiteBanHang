@@ -83,56 +83,71 @@
                 <div class="span10">
                     <ul class="breadcrumb">
                         <li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
-                        <li class="active">Lịch sử đơn hàng</li>
+                        <li class="active">Lịch sử đơn hàng<span class="divider">/</span></li>
+                        <li class="active">Chi tiết đơn hàng</li>
+                        <li class="active">#0001<span class="divider">-</span></li>
+                        <li class="active"><b>Giao hàng thành công</b></li>
                     </ul>
-                    <table class="table">
+                    <div id="detail">
+                        <div class="row">
+                            <div class="span3">Địa chỉ người nhận</div>
+                            <div class="span3">Hình thức giao hàng</div>
+                            <div class="span3">Hình thức thanh toán</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="span3" style="list-style: line-height 0.5em;">
+                                <p><b>Tên khách hàng</b></p>
+                                <p>Địa chỉ: </p>
+                                <p>Điện thoại: </p>
+                            </div>
+                            <div class="span3" style="list-style: line-height 0.5em;">
+                                <p>Chuyển phát nhanh </p>
+                                <p>Phí vận chuyển: 10.000</p>
+                            </div>
+                            <div class="span3" style="list-style: line-height 0.5em;">
+                                <p>Thanh toán tiền mặt khi nhận hàng.</p>
+                            </div>
+                        </div>
+                        <table class="table">
                         <thead>
                             <tr>
-                                <th>Mã đơn hàng</th>
-                                <th>Ngày mua</th>
                                 <th>Sản phẩm</th>
-                                <th>Tổng tiền</th>
-                                <th>Trạng thái đơn hàng</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Tạm tính</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#">0001</a></td>
-                                <td>20/04/2018</td>
                                 <td>Tên sản phẩm</td>
                                 <td>10.000.000</td>
-                                <td>Giao hàng thành công</td>
+                                <td>1</td>
+                                <td>10.000.000</td>
                             </tr>
                             <tr>
-                                <td><a href="#">0001</a></td>
-                                <td>20/04/2018</td>
                                 <td>Tên sản phẩm</td>
                                 <td>10.000.000</td>
-                                <td>Giao hàng thành công</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">0001</a></td>
-                                <td>20/04/2018</td>
-                                <td>Tên sản phẩm</td>
+                                <td>1</td>
                                 <td>10.000.000</td>
-                                <td>Giao hàng thành công</td>
                             </tr>
-                            <tr>
-                                <td><a href="#">0001</a></td>
-                                <td>20/04/2018</td>
-                                <td>Tên sản phẩm</td>
-                                <td>10.000.000</td>
-                                <td>Giao hàng thành công</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">0001</a></td>
-                                <td>20/04/2018</td>
-                                <td>Tên sản phẩm</td>
-                                <td>10.000.000</td>
-                                <td>Giao hàng thành công</td>
-                            </tr>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3"><span>Tổng tạm tính</span></td>
+                                    <td>20.000.000&nbsp;đ</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><span>Phí vận chuyển</span></td>
+                                    <td>10.000&nbsp;đ</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><span>Tổng cộng</span></td>
+                                    <td>20.010.000&nbsp;đ</td>
+                                </tr>
+                            </tfoot>
                         </tbody>
                     </table>
+                    </div>
                     <div class="pagination">
                         <ul>
                             <li><a href="#">&lsaquo;</a></li>
