@@ -121,7 +121,36 @@
         </div>
     </div>
     <!-- Header End====================================================================== -->
-    {{{body}}}
+    <div id="mainBody">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar ================================================== -->
+                <div id="sidebar" class="span2">
+                    <div class="well well-small"><a id="myCart" href="#"><img src="/public/themes/images/ico-cart.png" alt="cart">Giỏ hàng [{{amount}}]</a></div>
+                    <ul id="sideManu" class="nav nav-tabs nav-stacked">
+                        <li class="subMenu open"><a> Loại sản phẩm</a>
+                            <ul>
+                                <li><a class="active" href="#"><i class="icon-chevron-right"></i>Máy ảnh DSRL ({{DSRL_amount}}) </a></li>
+                                <li><a href="#"><i class="icon-chevron-right"></i>Máy ảnh Microless ({{Microless_amount}})</a></li>
+                                <li><a href="#"><i class="icon-chevron-right"></i>Máy ảnh Kỹ thuật số ({{KTS_amount}})</a></li>
+                            </ul>
+                        </li>
+                        <li class="subMenu"><a>Thương hiệu</a>
+                            <ul style="display:none">                                
+                                <li><a href="#"><i class="icon-chevron-right"></i>CANON</a></li>
+                                <li><a href="#"><i class="icon-chevron-right"></i>NIKON</a></li>
+                                <li><a href="#"><i class="icon-chevron-right"></i>SONY</a></li>
+                                <li><a href="#"><i class="icon-chevron-right"></i>FUJIFILM</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br/>
+                </div>
+                <!-- Sidebar end=============================================== -->
+            </div>
+            {{{body}}}
+        </div>
+    </div>
     <!-- Footer ================================================================== -->
     <div id="footerSection">
         <div class="container">

@@ -1,0 +1,47 @@
+<div class="span10">
+    <ul class="breadcrumb">
+        <li><a href="/">Trang chủ</a> <span class="divider">/</span></li>
+        <li class="active">Các sản phẩm của {{CatName}}</li>
+    </ul>
+    <h3></h3>
+    <hr class="soft" />
+    <form class="form-horizontal span6">
+        <div class="control-group">
+            <label class="control-label alignL">Sắp xếp theo </label>
+            <select name="" id="">
+                <option value="">Tên sản phẩm A-Z</option>
+                <option value="">Tên sản phẩm Z-A</option>
+            </select>
+        </div>
+    </form>
+    <div id="myTab" class="pull-right">
+        <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
+        <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
+    </div>
+    <br class="clr" />
+    <div class="tab-content">
+        <div class="tab-pane" id="listView">
+            <div class="row">
+                {{#each product}}
+                <div class="span2">
+                    <img src="{{product_image}}" alt="" />
+                </div>
+                <div class="span4">
+                    <h3>{{product_name}}</h3>
+                    <hr class="soft" />
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores a repellat, error quod tenetur esse excepturi corporis voluptas unde ducimus qui, itaque eligendi earum perspiciatis, fugiat harum eos nam iusto?</p>
+                    <a class="btn btn-small pull-right" href="/product_details.html?id_product={{IDproduct}}">View Details</a>
+                    <br class="clr" />
+                </div>
+                <div class="span3 alignR">
+                    <form class="form-horizontal qtyFrm">
+                        <h3>{{product_price}}</h3>
+                        <a href="#" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                    </form>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
