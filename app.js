@@ -3,6 +3,12 @@ var exphbs = require('express-handlebars');
 var express_handlebars_sections = require('express-handlebars-sections');
 var path = require('path');
 
+var session = require('express-session');
+var MySQLStore = require('express-mysql-session')(session);
+
+
+
+
 var homeController = require('./controllers/homeController');
 
 var app = express();

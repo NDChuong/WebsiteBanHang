@@ -1,3 +1,113 @@
 {{#with product}}
+<div class="span10">
+    <ul class="breadcrumb">
+        <h3>Thông tin chi tiết sản phẩm</h3>
+    </ul>
+    <div class="row">
+        <div id="gallery" class="span4">
+            <a href="themes/images/products/large/f1.jpg" title="{{product_name}}">
+				<img src="themes/images/products/large/3.jpg" style="width:100%" alt="{{product_name}}" />
+			</a>
+            <div id="differentview" class="moreOptopm carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="themes/images/products/large/f1.jpg">
+							<img style="width:29%" src="themes/images/products/large/f1.jpg" alt="" />
+						</a>
+						<a href="themes/images/products/large/f2.jpg">
+							<img style="width:29%" src="themes/images/products/large/f2.jpg" alt="" />
+						</a>
+						<a href="themes/images/products/large/f3.jpg">
+							<img style="width:29%" src="themes/images/products/large/f3.jpg" alt="" />
+						</a>
+                    </div>
+                    <div class="item">
+                        <a href="themes/images/products/large/f1.jpg">
+							<img style="width:29%" src="themes/images/products/large/f1.jpg" alt="" />
+						</a>
+						<a href="themes/images/products/large/f2.jpg">
+							<img style="width:29%" src="themes/images/products/large/f2.jpg" alt="" />
+						</a>
+						<a href="themes/images/products/large/f3.jpg">
+							<img style="width:29%" src="themes/images/products/large/f3.jpg" alt="" />
+						</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-toolbar"></div>
+            <div class="span6">
+                <h3>{{product_name}}</h3>
+                <small>{{- (14MP, 18x Optical Zoom) 3-inch LCD}}</small>
+                <hr class="soft" />
+                <form class="form-horizontal qtyFrm">
+                    <div class="control-group">
+						<label class="control-label">
+							<span>{{product_price}}</span>
+						</label>
+						<div class="controls">
+							<input type="number" class="span1" placeholder="0" />
+							<button type="submit" class="btn btn-large btn-primary pull-right"> Thêm vào giỏ hàng
+								<i class=" icon-shopping-cart"></i>
+							</button>
+						</div>
+					</div>
+                </form>
 
+                <hr class="soft" />
+				<h4>Còn {{rest_amount}} sản phẩm</h4>
+                <form class="form-horizontal qtyFrm pull-right">
+                    <div class="control-group">
+					    <label class="control-label">
+							<span>Màu sản phẩm</span>
+						</label>
+						<div class="controls">
+							<select class="span2">
+                                {{#each color}}
+								<option>{{color_option}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+                </form>
+                <hr class="soft clr" />
+                <p>
+                    {{product_discription}}
+                </p>
+				<br class="clr" />
+				<hr class="soft" />                
+            </div>
+            <div class="span10">
+                <ul id="productDetail" class="nav nav-tabs">
+					<li class="active">
+						<a href="#home" data-toggle="tab">Thông tin</a>
+					</li>
+				</ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="home">
+                        <h4>Thông tin sản phẩm</h4>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr class="techSpecRow">
+									th colspan="2">Thông tin chi tiết</th>
+								</tr>
+								<tr class="techSpecRow">
+									<td class="techSpecTD1">Hãng: </td>
+									<td class="techSpecTD2">{{IDCat}}</td>
+								</tr>
+								<tr class="techSpecRow">
+									<td class="techSpecTD1">Phiên bản:</td>
+									<td class="techSpecTD2">{{product_version}}</td>
+								</tr>
+								<tr class="techSpecRow">
+									<td class="techSpecTD1">Kích thước:</td>
+									<td class="techSpecTD2">{{product_size}}</td>
+								</tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{/with}}
