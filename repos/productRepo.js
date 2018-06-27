@@ -37,3 +37,12 @@ exports.getNew = (n)=>{
     var sql = `select * from products order by ProID DESC limit ${n}`;
     return db.load(sql);
 }
+
+exports.getCateAmount = (CatID) =>{
+    var sql = `select count(*) from products where CatID = ${CatID}`;
+    return db.load(sql);
+}
+exports.getBrand = (BraID)=>{
+    var sql = `select * from products where BraID = ${BraID}`;
+    return db.load(sql);
+}
