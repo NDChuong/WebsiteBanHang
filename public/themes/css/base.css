@@ -137,7 +137,12 @@ a#lnkLogout{
     padding: 8px 14px 0;
     margin-bottom: 0
 }
-
+ul.pagination li{
+    display: inline-block;
+}
+ul.pagination li a{    
+    color: black;
+}
 
 /* Compair product page */
 

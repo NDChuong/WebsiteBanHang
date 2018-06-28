@@ -4,27 +4,6 @@ var config = require('../config/config');
 
 var router = express.Router();
 
-// router.get('/byCat', (req, res) => {
-//     var catId = req.query.catId;
-//     productRepo.loadAllByCat(catId).then(rows => {
-//         var vm = {
-//             products: rows
-//         };
-//         res.render('product/byCat', vm);
-//     });
-// });
-
-// router.get('/byCat/:catId', (req, res) => {
-//     var catId = req.params.catId;
-//     productRepo.loadAllByCat(catId).then(rows => {
-//         var vm = {
-//             products: rows,
-//             noProducts: rows.length === 0
-//         };
-//         res.render('product/byCat', vm);
-//     });
-// });
-
 router.get('/byCat/:catId', (req, res) => {
     var catId = req.params.catId;
 
@@ -60,7 +39,48 @@ router.get('/byCat/:catId', (req, res) => {
             noProducts: pRows.length === 0,
             page_numbers: numbers
         };
+        console.log(vm);
         res.render('product/byCat', vm);
+    });
+});
+
+router.get('/byBrand/:braId', (req, res) => {
+    var braId = req.params.braId;
+
+    var page = req.query.page;
+    if (!page) {
+        page = 1;
+    }
+
+    var offset = (page - 1) * config.PRODUCTS_PER_PAGE;
+
+    var p1 = productRepo.loadByBrand(braId, offset);
+    var p2 = productRepo.countByBrand(braId);
+    Promise.all([p1, p2]).then(([pRows, countRows]) => {
+        // console.log(pRows);
+        // console.log(countRows);
+
+        var total = countRows[0].total;
+        var nPages = total / config.PRODUCTS_PER_PAGE;
+        if (total % config.PRODUCTS_PER_PAGE > 0) {
+            nPages++;
+        }
+
+        var numbers = [];
+        for (i = 1; i <= nPages; i++) {
+            numbers.push({
+                value: i,
+                isCurPage: i === +page
+            });
+        }
+
+        var vm = {
+            products: pRows,
+            noProducts: pRows.length === 0,
+            page_numbers: numbers
+        };
+        console.log(vm);
+        res.render('product/byBrand', vm);
     });
 });
 

@@ -25,6 +25,12 @@ exports.loadByBrand = (braId, offset) =>{
     var sql = `select * from products where BraID = ${braId} limit ${config.PRODUCTS_PER_PAGE} offset ${offset}`;
     return db.load(sql);
 }
+
+exports.countByBrand = braId => {
+	var sql = `select count(*) as total from products where BraID = ${braId}`;
+    return db.load(sql);
+}
+
 exports.getBestsell = (n)=>{
     var sql = `select * from products order by Sell limit ${n}`;
     return db.load(sql);

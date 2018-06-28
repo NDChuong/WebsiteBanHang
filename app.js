@@ -3,6 +3,7 @@ var exphbs = require('express-handlebars');
 var express_handlebars_sections = require('express-handlebars-sections');
 var path = require('path');
 var bodyParser = require('body-parser');
+var wnumb = require('wnumb');
 
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
@@ -25,7 +26,13 @@ app.engine('hbs', exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layout/',
     helpers: {
-        section: express_handlebars_sections()
+        section: express_handlebars_sections(),
+        number_format: n => {
+            var nf = wnumb({
+                thousand: ','
+            });
+            return nf.to(n);
+        }
     }
 }));
 
