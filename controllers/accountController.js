@@ -9,7 +9,7 @@ var router = express.Router();
 
 router.post('/register', (req, res)=>{
     console.log(req.body.name);
-    var dob = moment(req.body.dob, 'MM/DD/YYYY')
+    var dob = moment(req.body.dob, 'D/M/YYYY')
         .format('YYYY-MM-DDTHH:mm');
     var user = {
         username: req.body.username,
@@ -19,7 +19,7 @@ router.post('/register', (req, res)=>{
         dob: dob,
         permission: 0
     };
-    
+    console.log(user);
     accountRepo.add(user).then(values =>{
         //res.render('account/register');
         var url = '/';

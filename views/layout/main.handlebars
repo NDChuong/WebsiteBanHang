@@ -44,13 +44,9 @@
                     
                     <ul id="topMenu" class="nav pull-right">
                         {{#if LayoutVM.isLogged}}
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{LayoutVM.curUser.f_Name}}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Thông tin</a></li>
-                                <li><a href="/logout">Đăng xuất</a></li>
-                            </ul>
-                        </li>
+                        <form id="frmLogout" method="post" action="/account/logout"></form>
+                        <a href="#">{{LayoutVM.curUser.f_Name}}</a>
+                        <a id="lnkLogout" href="javascript:;">Logout</a>
                         {{else}}
                         <li class="">
                             <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng nhập</span></a>
@@ -60,17 +56,17 @@
                                     <h3>Đăng nhập</h3>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal loginFrm">
+                                    <form action="/account/login" class="form-horizontal loginFrm" method="POST" id="frmLogin">
                                         <div class="row">
                                             <div class="control-group">
-                                                <span class="span2">Email: </span>
-                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                                <span class="span2">Tên đăng nhập: </span>
+                                                <input type="text" id="txtUsername" placeholder="Tên đăng nhập" class="span3" name="username">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="control-group">
                                                 <span class="span2">Mật khẩu: </span>
-                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                                <input type="password" id="txtPWD" placeholder="Password" class="span3" name="rawPWD">
                                             </div>
                                         </div>
                                         <div class="control-group">
@@ -78,9 +74,10 @@
                                                 <input type="checkbox"> Remember me
                                             </label>
                                         </div>
+                                        <button type="submit" class="btn btn-success">Đăng nhập</button>
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
                                     </form>
-                                    <button type="submit" class="btn btn-success">Đăng nhập</button>
-                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                                    
                                 </div>
                             </div>
                         </li>
@@ -92,7 +89,7 @@
                                     <h3>Đăng ký</h3>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="" class="form-horizontal loginFrm" method="POST" role="form" onsubmit="return validate();">
+                                    <form action="/account/register" class="form-horizontal loginFrm" method="POST" role="form" onsubmit="return validate();">
                                         <div class="row">
                                             <div class="control-group">
                                                 <span class="span2">Tên đăng nhập: </span>
@@ -127,7 +124,7 @@
                                         <div class="row">
                                             <div class="control-group">
                                                 <span class="span2">Ngày sinh: </span>
-                                                <input type="date" id="txtDOB" placeholder="Email" class="span3" name="dob">
+                                                <input type="text" id="txtDOB" placeholder="d/m/yyyy" class="span3" name="dob">
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-success" >Đăng ký</button>
@@ -200,6 +197,11 @@
 
 		    return true;
     </script>
+    <script type="text/javascript">
+		$('#lnkLogout').on('click', function() {
+			$('#frmLogout').submit();
+		});
+	</script>
 </body>
 
 </html>

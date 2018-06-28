@@ -34,6 +34,12 @@
 .marginLess {
     margin: 0
 }
+a{
+    color:white;
+}
+a#lnkLogout{
+    margin-left: 20px;
+}
 
 #logoArea,
 #logoArea a {
@@ -66,6 +72,7 @@
 }
 
 #myCart {
+    color: black;
     font-size: 13px;
     font-weight: bold;
     line-height: 33px;

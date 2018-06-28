@@ -5,12 +5,12 @@
     {{#each product}}
     <li class="span2">
         <div class="thumbnail">
-            <a href="/product_details.html?id_product={{IDproduct}}"><img src="{{product_image}}" alt="{{product_name}}"/></a>
+            <a href="/product/detail/{{ProID}}"><img src="themes/images/data/{{ProID}}.jpg" alt="{{ProName}}"/></a>
             <div class="caption">
-                <h5>{{product_name}}</h5>
-                <p>{{product_price}}</p>
+                <h5>{{ProName}}</h5>
+                <p>{{Price}}</p>
                 <h4 style="text-align:center">
-                    <a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a>
+                    <a class="btn" href="/product/detail/{{ProID}}"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a>
                 </h4>
             </div>
         </div>
