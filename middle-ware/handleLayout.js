@@ -7,16 +7,14 @@ module.exports = (req, res, next) =>{
         req.session.isLogged = false;   
     }
     var Cate = categoryRepo.loadAll();
-    var Brand = brandRepo.loadAll();
-    Promise.all([Cate,Brand]).then(([Crows,Brows])=>{
+    var Brand = brandRepo.loadAll();    
+    Promise.all([Cate,Brand]).then(([Crows,Brows])=>{                  
         res.locals.LayoutVM = {
             categories: Crows,
             brands:Brows,
-            Amount:product.getCateAmount(rows[0].CatID),
             isLogged: req.session.isLogged,
             curUser: req.session.user
         }
-        console.log(rows[0].CatID);
         next();
     });
 

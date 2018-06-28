@@ -41,7 +41,17 @@
                         <input id="srchFld" class="srchTxt" type="text" />
                         <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
                     </form>
+                    
                     <ul id="topMenu" class="nav pull-right">
+                        {{#if LayoutVM.isLogged}}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{LayoutVM.curUser.f_Name}}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Thông tin</a></li>
+                                <li><a href="/logout">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        {{else}}
                         <li class="">
                             <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng nhập</span></a>
                             <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
@@ -82,39 +92,52 @@
                                     <h3>Đăng ký</h3>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal loginFrm">
+                                    <form action="" class="form-horizontal loginFrm" method="POST" role="form" onsubmit="return validate();">
                                         <div class="row">
                                             <div class="control-group">
-                                                <span class="span2">Email: </span>
-                                                <input type="text" id="inputEmail" placeholder="Email" class="span3">
+                                                <span class="span2">Tên đăng nhập: </span>
+                                                <input type="text" id="txtUsername" placeholder="Username" class="span3" name="username">
                                             </div>
                                         </div>
+                                        
                                         <div class="row">
                                             <div class="control-group">
                                                 <span class="span2">Mật khẩu: </span>
-                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                                <input type="password" id="txtPWD" placeholder="Password" class="span3" name="rawPWD">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="control-group">
                                                 <span class="span2">Xác nhận mật khẩu: </span>
-                                                <input type="password" id="inputPassword" placeholder="Password" class="span3">
+                                                <input type="password" id="txtCPWD" placeholder="Nhập lại Password" class="span3" name="cPWD">
                                             </div>
-                                        </div>                                        
-                                        
+                                        </div>   
                                         <div class="row">
                                             <div class="control-group">
-                                                <span class="span2">Mã captcha: </span>
-                                                <input type="text" id="inputCaptcha" placeholder="Captcha" class="span3">
+                                                <span class="span2">Email: </span>
+                                                <input type="text" id="txtEmail" placeholder="Email" class="span3" name="email">
                                             </div>
-                                        </div> 
-                                        
+                                        </div>                                     
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Họ và tên: </span>
+                                                <input type="text" id="txtName" placeholder="Họ và tên" class="span3" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="control-group">
+                                                <span class="span2">Ngày sinh: </span>
+                                                <input type="date" id="txtDOB" placeholder="Email" class="span3" name="dob">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success" >Đăng ký</button>
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
                                     </form>
-                                    <button type="submit" class="btn btn-success">Đăng ký</button>
-                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                                    
                                 </div>
                             </div>
                         </li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
@@ -131,7 +154,7 @@
                         <li class="subMenu open"><a> Loại sản phẩm</a>
                             <ul>
                                 {{#each LayoutVM.categories}}
-                                <li><a href="/products/byCat/{{CatID}}"><i class="icon-chevron-right"></i>{{CatName}} ({{Amount}})</a></li>
+                                <li><a href="/products/byCat/{{CatID}}"><i class="icon-chevron-right"></i>{{CatName}}</a></li>
                                 {{/each}}
                             </ul>
                         </li>
@@ -163,6 +186,20 @@
     <script src="themes/js/google-code-prettify/prettify.js"></script>
     <script src="themes/js/bootshop.js"></script>
     <script src="themes/js/jquery.lightbox-0.5.js"></script>
+    <script type="text/javascript">
+        var validate = function() {
+		    if ($('#txtUsername').val().length === 0) {
+		        alert('Error');
+		        return false;
+		    }
+
+		    if ($('#txtPWD').val() !== $('#txtCPWD').val()) {
+		        alert('not match');
+		        return false;
+		    }
+
+		    return true;
+    </script>
 </body>
 
 </html>
