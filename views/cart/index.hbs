@@ -11,16 +11,16 @@
             </tr>
         </thead>
         <tbody>
-            {{#each product}}
+            {{#each items}}
             <tr>
                 <td>
-                    <img width="60" src="themes/images/products/{{ProID}}.jpg" alt="" />
+                    <img width="60" src="/themes/images/products/{{ProID}}.jpg" alt="" />
                 </td>
-                <td>{{ProName}}
+                <td>{{Product.ProName}}
                     <br/>Xuất Sứ: Nhật Bản</td>
                 <td>
                     <div class="input-append">
-                        <input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text">
+                        <input class="span1" style="max-width:34px" placeholder="{{Quantity}}" id="appendedInputButtons" size="16" type="text">
                         <button class="btn" type="button">
                             <i class="icon-minus"></i>
                         </button>
@@ -32,7 +32,7 @@
                         </button>
                     </div>
                 </td>
-                <td>{{Price}} VND</td>
+                <td>{{Product.Price}} VND</td>
             </tr>
             {{/each}}
             <tr>
@@ -40,7 +40,7 @@
                     <strong>Tổng giá =</strong>
                 </td>
                 <td>
-                    <strong> {{TotalPrice}} </strong>
+                    <strong> {{items.Amount}} </strong>
                 </td>
             </tr>
         </tbody>

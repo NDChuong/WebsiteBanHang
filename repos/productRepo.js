@@ -52,3 +52,7 @@ exports.getBrand = (BraID)=>{
     var sql = `select * from products where BraID = ${BraID}`;
     return db.load(sql);
 }
+exports.getCate = (CatID)=>{
+    var sql = `select * from products where CatID = ${CatID}`;
+    return db.load(sql);
+}

@@ -4,19 +4,23 @@ var cartRepo = require('../repos/cartRepo'),
 
 var router = express.Router();
 
-router.get('/index', (req, res) => {
-
+router.get('/', (req, res) => {
+    
     var arr_p = [];
     for (var i = 0; i < req.session.cart.length; i++) {
         var cartItem = req.session.cart[i];
         var p = productRepo.single(cartItem.ProId);
         arr_p.push(p);
+        console.log(req.session.cart[i]);
     }
-
+    
     var items = [];
     Promise.all(arr_p).then(result => {
+        console.log('ok');
+        
         for (var i = result.length - 1; i >= 0; i--) {
             var pro = result[i][0];
+            console.log(pro);
             var item = {
                 Product: pro,
                 Quantity: req.session.cart[i].Quantity,
@@ -28,6 +32,7 @@ router.get('/index', (req, res) => {
         var vm = {
             items: items
         };
+        console.log(vm);
         res.render('cart/index', vm);
     });
 });
