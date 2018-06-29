@@ -1,0 +1,26 @@
+<div class="span10">
+    <h3>Thông tin cá nhân</h3>
+    <div class="modal-body">
+        <form action="/account/account-setting/{{f_ID}}" class="form-horizontal loginFrm" method="POST" role="form">
+        <div class="row">
+                <div class="control-group">
+                    <span class="span2">Họ và tên: </span>
+                    <input type="text" id="txtName" placeholder="{{f_Name}}" class="span3" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="control-group">
+                    <span class="span2">Email: </span>
+                    <input type="text" id="txtEmail" placeholder="{{f_Email}}" class="span3" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="control-group">
+                    <span class="span2">Ngày sinh: </span>
+                    <input type="text" id="txtDOB" placeholder="{{f_DOB}}" class="span3" name="dob">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Cập nhật</button>
+        </form>
+    </div>
+</div>

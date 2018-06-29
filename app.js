@@ -18,7 +18,7 @@ var homeController = require('./controllers/homeController'),
     cartController = require('./controllers/cartController');
 
 var handleLayout = require('./middle-ware/handleLayout');
-   // restrict = require('./middle-ware/restrict');
+    restrict = require('./middle-ware/restrict');
 
 var app = express();
 
@@ -76,7 +76,7 @@ app.use('/category', categoryController);
 app.use('/product', productController);
 app.use('/account', accountController);
 
-//app.use('/cart', restrict, cartController);
+app.use('/cart', restrict, cartController);
 
 app.listen(3000, () => {
     console.log('Site running on port 3000');
