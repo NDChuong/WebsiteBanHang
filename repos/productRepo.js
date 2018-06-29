@@ -17,7 +17,7 @@ exports.countByCat = catId => {
 }
 
 exports.single = proId => {
-    var sql = `select * from products, brands, categories where products.ProID = ${proId} and brands.ProID = ${proId} and categories.ProID = ${proId}`;
+    var sql = `select * from products where ProID = ${proId}`;
     return db.load(sql);
 }
 

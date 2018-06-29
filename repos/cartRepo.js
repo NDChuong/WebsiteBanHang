@@ -7,6 +7,7 @@ exports.add = (cart, item) => {
     }
 
     cart.push(item);
+    console.log(cart);
 }
 
 exports.remove = (cart, proId) => {

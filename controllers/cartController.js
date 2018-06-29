@@ -33,11 +33,12 @@ router.get('/index', (req, res) => {
 });
 
 router.post('/add', (req, res) => {
+    console.log('ok');
     var item = {
         ProId: req.body.proId,
         Quantity: +req.body.quantity
     };
-
+    console.log(item);
     cartRepo.add(req.session.cart, item);
     res.redirect(req.headers.referer);
 });
